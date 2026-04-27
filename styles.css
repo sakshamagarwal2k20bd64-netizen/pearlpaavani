@@ -1,0 +1,143 @@
+:root {
+    --bg-color: #7eafd0;
+    --text-main: #1a1a1a;
+    --text-muted: #000000;
+    --border-color: #e5e5e5;
+    --accent-black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Chivo Mono', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    font-family: 'Chivo Mono', monospace; /* Using monospace for that technical look */
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;        
+    margin: 0 15px;       
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: Subtle hover effect */
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+.logo a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Keeps the black color from the parent div */
+    display: inline-block; /* Ensures the click area is correct */
+}
+
+.logo {
+    font-family: 'Climate Crisis', sans-serif;
+    font-size: 1.2rem;
+    /* Ensure the logo font variation settings stay intact */
+    font-variation-settings: "YEAR" 1979; 
+}
+.nav-links a:hover { color: var(--accent-black); }
+
+
+.cta-btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+/* Cards Section */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.card {
+    border: 1.5px solid var(--accent-black);
+    border-radius: 12px;
+    padding: 30px;
+    background: #9ac8e7;
+}
+
+.card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Floating Icons (Simplified) */
+.icon {
+    position: absolute;
+    font-size: 5rem;
+    opacity: 0.6;
+}
+.i1 { top: -20px; left: -200px; }
+.i2 { top: -20px; right: -300px; }
+.i3 { bottom: 200; left: -400px; }
+.i4 { bottom: -px; right: -450px; }
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+}

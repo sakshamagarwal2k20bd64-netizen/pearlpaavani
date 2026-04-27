@@ -1,0 +1,138 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #9ac8e7;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    font-family: 'Chivo Mono', monospace; /* Using monospace for that technical look */
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;        
+    margin: 0 15px;       
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: Subtle hover effect */
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+.logo a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Keeps the black color from the parent div */
+    display: inline-block; /* Ensures the click area is correct */
+}
+
+.logo {
+    font-family: 'Climate Crisis', sans-serif;
+    font-size: 1.2rem;
+    /* Ensure the logo font variation settings stay intact */
+    font-variation-settings: "YEAR" 1979; 
+}
+.nav-links a:hover { color: var(--accent-black); }
+
+/* HEADER */
+.showcase-header {
+    padding: 100px 5% 60px;
+    text-align: center;
+}
+
+.showcase-header h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 4rem;
+    letter-spacing: -2px;
+}
+
+/* 2-COLUMN GRID */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Exact 2-column layout */
+    gap: 60px 40px; /* Vertical gap 60px, Horizontal gap 40px */
+    padding: 0 5% 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* PROJECT CARD - NO FLOURISHES */
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-box {
+    background: #f4f4f4;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden; /* CRITICAL: This clips the image to the rounded corners */
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    
+    /* ADD THIS LINE */
+    border-radius: 20px; 
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px; /* Added this to match the container */
+} /* <--- THIS WAS MISSING */
+
+.label {
+    display: block;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 0.7rem;
+    color: #000000;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.project-info h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    line-height: 1.2; /* Tightens the heading to match the Dia look */
+}
+
+.project-info p {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 1rem;
+    color: #444;
+    max-width: 90%;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 60px;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 0.75rem;
+    border-top: 1px solid #000;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack on small screens */
+    }
+    .showcase-header h1 {
+        font-size: 2.5rem;
+    }
+}
